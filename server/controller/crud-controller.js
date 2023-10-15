@@ -33,7 +33,7 @@ const update = async (request, response) => {
   try {
     const updateData = await crud.findByIdAndUpdate(
       _id,
-      { name: request.body.fname, email: request.body.email, number: request.body.number },
+      { name: request.body.name, email: request.body.email, number: request.body.number },
       {
         new: true,
         runValidators: true,

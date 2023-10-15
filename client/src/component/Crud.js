@@ -10,6 +10,7 @@ function Crud() {
   const [number, setNumber] = useState("");
   const [crudData, setCrudData] = useState([]);
   const [editData, setEditData] = useState([]);
+  ;
   const [show, setShow] = useState(false);
   const handleClose = () => {
     setShow(false);
@@ -51,6 +52,7 @@ function Crud() {
 
   const handleUpdate = (e) => {
     e.preventDefault();
+    console.log(editData?.name,)
     try {
       axios
         .put(`http://localhost:8080/update/${editData?._id}`, {
